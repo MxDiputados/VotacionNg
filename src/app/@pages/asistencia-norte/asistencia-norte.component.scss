@@ -1,0 +1,86 @@
+main {
+    background-color: #000;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+    /*font-size: 1.3em ;*/
+    line-height: 0.9em;
+    height: 1080px;
+    width: 1292px;
+    /*width: 1360px;*/
+    margin: 0px;
+    padding: 0px;
+}
+
+.link {
+    color: #fff;
+    text-decoration-style: none !important;
+}
+
+.padding-0 {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.4em;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.voto-white {
+    color: white;
+}
+
+.voto-green {
+    color: green;
+}
+
+.voto-red {
+    color: red;
+}
+
+.voto-yellow {
+    color: yellow;
+}
+
+.voto-azul {
+    color: #5cb4f7;
+}
+
+
+/*footer*/
+
+footer {
+    background-color: #eceae8;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: relative;
+    background-size: 100%;
+    display: block;
+}
+
+footer .footer-area-top {
+    padding: 20px 0 10px;
+    border-bottom: 1px solid #aeaeae;
+    background-color: #18332d;
+    color: #f3f3f3;
+}
+
+.footerbtom {
+    background-image: url(http://dstqa.diputados.gob.mx/GestionCiudadanaQA/Assets/imagenes/linea.jpg);
+    padding: 0;
+    width: 100%;
+}
+
+.footer-area-bottom img,
+.main-menu-area img {
+    width: 153px;
+}
+
+a.text-success,
+a.text-success:focus,
+a.text-success:hover {
+    color: #18332D !important;
+}
