@@ -1,9 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { ApiService } from "../../@core/services/api.service";
-import {
-  Totales,
-  TiempoRestante,
-} from "../../@core/interfaces/tablero.interface";
+
 
 @Component({
   selector: "app-tablero-norte",

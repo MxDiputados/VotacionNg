@@ -24,6 +24,7 @@ import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 import { MatButtonModule } from "@angular/material/button";
 import { CabinaComponent } from "./@pages/cabina/cabina.component";
 import { MatIconModule } from "@angular/material/icon";
+import { LazyLoadImageModule } from "ng-lazyload-image";
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { MatIconModule } from "@angular/material/icon";
     NoopAnimationsModule,
     MatButtonModule,
     MatIconModule,
+    LazyLoadImageModule,
   ],
   exports: [MatButtonModule, MatIconModule],
   providers: [],

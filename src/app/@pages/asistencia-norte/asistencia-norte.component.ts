@@ -24,9 +24,9 @@ interface Response {
 })
 export class AsistenciaNorteComponent implements OnInit {
   title = "DiputadosVotaciones";
-  allAsistencias: DiputadoVotacion[] = [];
-  allAsistencias2: DiputadoVotacion[] = [];
-  allAsistencias3: DiputadoVotacion[] = [];
+  allAsistencias: any[] = [];
+  allAsistencias2: any[] = [];
+  allAsistencias3: any[] = [];
   tiempoRestante: TiempoRestante;
   DiputadosCount: Totales;
   DiputadosCountSitio: Totales;
@@ -63,7 +63,7 @@ export class AsistenciaNorteComponent implements OnInit {
             83,
             166
           );
-          this.allAsistencias2 = this.asistenciaActiva.Asistencias.slice(
+          this.allAsistencias3 = this.asistenciaActiva.Asistencias.slice(
             166,
             251
           );

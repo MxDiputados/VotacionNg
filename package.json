@@ -32,6 +32,7 @@
     "chart.js": "^2.8.0",
     "graphql": "^15.3.0",
     "graphql-tag": "^2.10.3",
+    "ng-lazyload-image": "^9.1.0",
     "ng2-charts": "^2.3.0",
     "rxjs": "~6.5.4",
     "subscriptions-transport-ws": "^0.10.0",

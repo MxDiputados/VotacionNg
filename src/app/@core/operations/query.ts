@@ -31,8 +31,12 @@ export const queryVotacionActiva = gql`
         Resultado
         Votos {
           Oid
+          TipoVoto
+          PosicionVoto
+          fechaHora
           Diputado {
             NombreCompleto
+            NombreAMostrar
             OID
             Partido {
               NombrePartido
@@ -53,6 +57,7 @@ export const queryVotacionActiva = gql`
       Diputado {
         OID
         NombreCompleto
+        NombreAMostrar
         Partido {
           OID
           Orden
@@ -81,6 +86,7 @@ export const queryAsistenciaActiva = gql`
       Diputado{
         OID
         Nombre
+        NombreCompleto
         NombreAMostrar
         Partido{
           Orden
@@ -89,6 +95,25 @@ export const queryAsistenciaActiva = gql`
           NombreCompleto
         }
       }
+    }
+  }
+}
+`;
+
+export const queryAllDiputados = gql`
+{
+  allDiputados{
+    OID
+    Nombre
+    PrimerApellido
+    SegundoApellido
+    NombreCompleto
+    NombreAMostrar
+    Partido{
+      OID
+      Orden
+      NombrePartido
+      NombreCompleto
     }
   }
 }

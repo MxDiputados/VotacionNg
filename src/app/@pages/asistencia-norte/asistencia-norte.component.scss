@@ -1,20 +1,13 @@
 main {
+    font-size: 0.7vw;
+    line-height: 0.64vw;
     background-color: #000;
     color: #fff;
+    height: 1980px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.2em;
-    /*font-size: 1.3em ;*/
-    line-height: 0.9em;
-    height: 1080px;
-    width: 1292px;
-    /*width: 1360px;*/
     margin: 0px;
     padding: 0px;
-}
-
-.link {
-    color: #fff;
-    text-decoration-style: none !important;
+    /* width: 1292px; */
 }
 
 .padding-0 {
@@ -82,5 +75,19 @@ footer .footer-area-top {
 a.text-success,
 a.text-success:focus,
 a.text-success:hover {
-    color: #18332D !important;
+    color: #18332d !important;
+}
+
+@media screen and (max-width: 1024px) {
+    main {
+        background-color: #000;
+        color: #fff;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 0.9vw;
+        line-height: 0.8vw;
+        height: 1080px;
+        width: 1292px;
+        margin: 0px;
+        padding: 0px;
+    }
 }

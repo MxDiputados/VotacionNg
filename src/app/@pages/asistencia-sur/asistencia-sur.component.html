@@ -1,1 +1,100 @@
-<p>asistencia-sur works!</p>
+<main>
+    <br />
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 col-md-6">
+                    <div class="row">
+                        <div *ngIf="allAsistencias" class="col-4 col-md-4 padding-0">
+                            <span *ngFor="let asistencia of allAsistencias" [class.voto-white]="asistencia.TipoAsistencia == 0" [class.voto-red]="
+                    asistencia.TipoAsistencia >= 1 &&
+                    asistencia.TipoAsistencia <= 4
+                  ">
+                  <b>{{ asistencia.Diputado.NombreAMostrar | uppercase }}</b>
+                  <!-- Canvas-->
+                  <span
+                    class="float-left">
+                    <svg height="6" width="18">
+                      <ellipse
+                        cx="5.5"
+                        cy="3"
+                        rx="5"
+                        ry="3"
+                        style="fill: #000; stroke: #000"/>
+                    </svg>
+                  </span>
+                            <!--Termina Canvas-->
+                            <br />
+                            </span>
+                        </div>
+                        <div *ngIf="allAsistencias2" class="col-4 col-md-4 padding-0">
+                            <span *ngFor="let votacion2 of allAsistencias2" [class.voto-white]="votacion2.TipoAsistencia == 0" [class.voto-red]="
+                    votacion2.TipoAsistencia >= 1 &&
+                    votacion2.TipoAsistencia <= 4 
+                  ">
+                  <b>{{ votacion2.Diputado.NombreAMostrar | uppercase }}</b>
+  
+                  <!-- Canvas-->
+                  <span
+                    class="float-left">
+                    <svg height="6" width="18">
+                      <ellipse
+                        cx="5.5"
+                        cy="3"
+                        rx="5"
+                        ry="3"
+                        style="fill: #000; stroke: #000"/>
+                    </svg>
+                  </span>
+                            <!--Termina Canvas-->
+
+                            <br />
+                            </span>
+                        </div>
+
+                        <div *ngIf="allAsistencias3" class="col-4 col-md-4 padding-0">
+                            <span *ngFor="let votacion3 of allAsistencias3" [class.voto-white]="votacion3.Asistencia == 0" [class.voto-red]="
+                    votacion3.TipoAsistencia >= 1 &&
+                    votacion3.TipoAsistencia <= 4 
+                  ">
+                  <b>{{ votacion3.Diputado.NombreAMostrar | uppercase }}</b>
+  
+                  <!-- Canvas-->
+                  <span
+                    class="float-left">
+                    <svg height="6" width="18">
+                      <ellipse
+                        cx="5.5"
+                        cy="3"
+                        rx="5"
+                        ry="3"
+                        style="fill: #000; stroke: #000"/>
+                    </svg>
+                  </span>
+                            <!--Termina Canvas-->
+                            <br />
+                            </span>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <div class="row">
+                        <div class="col-4 col-md-4" *ngFor="let presentes of DiputadosCount">
+
+                            <a [routerLink]="['/asistenciaNorte']" class="link" style="text-decoration: none;">
+                                <p>
+                                    <b>PRESENTES {{ presentes.count }}</b>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+                <div class="col-1" col-1></div>
+                <div class="col-5 col-md-5">
+                </div>
+            </div>
+        </div>
+        <br />
+    </section>
+</main>

@@ -3,247 +3,248 @@
     <section>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-8 col-md-8  mx-auto">
+                <div class="col-8 col-md-8 mx-auto">
                     <div class="row">
-                        <div class="col-3 col-md-3 ">
-                            <span *ngFor="let votacion of votaciones1" [class.voto-white]="votacion.Ubicacion == 0" [class.voto-red]="
-                    votacion.Ubicacion == 1 || votacion.Ubicacion == 2
-                  " [class.voto-azul]="votacion.Ubicacion >= 3" class="clearfix">
-                  <b>{{ votacion.NombreCompleto | uppercase }}</b>
-                  <span *ngIf="votacion.VotacionActiva == true">
-                    <span
-                      class="float-left"
-                      *ngIf="votacion.Votacion == 999 || votacion.Votacion == 0"
-                    >
-                      <svg height="6" width="18">
-                        <ellipse
-                          cx="5.5"
-                          cy="3"
-                          rx="5"
-                          ry="3"
-                          style="fill: #fff; stroke: #fff"
-                        />
-                      </svg>
-                    </span>
-                            <span class="float-left" *ngIf="votacion.Votacion == 1">
-                      <svg height="6" width="18">
-                        <ellipse
-                          cx="5.5"
-                          cy="3"
-                          rx="5"
-                          ry="3"
-                          style="fill: #008000; stroke: #008000"
-                        />
-                      </svg>
-                    </span>
-                            <span class="float-left" *ngIf="votacion.Votacion == 2">
-                      <svg height="6" width="18">
-                        <ellipse
-                          cx="5.5"
-                          cy="3"
-                          rx="5"
-                          ry="3"
-                          style="fill: #dd1313; stroke: #dd1313"
-                        />
-                      </svg>
-                    </span>
-                            <span class="float-left" *ngIf="votacion.Votacion == 3">
-                      <svg height="6" width="18">
-                        <ellipse
-                          cx="5.5"
-                          cy="3"
-                          rx="5"
-                          ry="3"
-                          style="fill: #ffff00; stroke: #ffff00"
-                        />
-                      </svg>
-                    </span>
-                            <span class="float-left" *ngIf="votacion.Votacion == 4">
-                      <svg height="6" width="18">
-                        <ellipse
-                          cx="5.5"
-                          cy="3"
-                          rx="5"
-                          ry="3"
-                          style="fill: #fff; stroke: #fff"
-                        />
-                      </svg>
-                    </span>
+                        <div class="col-3 col-md-3">
+                            <span *ngFor="let votacion of votaciones1" [class.voto-white]="votacion.TipoVoto == 0" [class.voto-red]="
+                  votacion.TipoVoto == 1 || votacion.TipoVoto == 2
+                " [class.voto-azul]="votacion.Ubicacion >= 3" class="clearfix">
+                <b>{{ votacion.Diputado.NombreAMostrar | uppercase }}</b>
+                <span>
+                  <span
+                    class="float-left"
+                    *ngIf="
+                      votacion.PosicionVoto == 999 || votacion.PosicionVoto == 0
+                    "
+                  >
+                    <svg height="6" width="18">
+                      <ellipse
+                        cx="5.5"
+                        cy="3"
+                        rx="5"
+                        ry="3"
+                        style="fill: #fff; stroke: #fff"
+                      />
+                    </svg>
+                  </span>
+                            <span class="float-left" *ngIf="votacion.PosicionVoto == 1">
+                    <svg height="6" width="18">
+                      <ellipse
+                        cx="5.5"
+                        cy="3"
+                        rx="5"
+                        ry="3"
+                        style="fill: #008000; stroke: #008000"
+                      />
+                    </svg>
+                  </span>
+                            <span class="float-left" *ngIf="votacion.PosicionVoto == 2">
+                    <svg height="6" width="18">
+                      <ellipse
+                        cx="5.5"
+                        cy="3"
+                        rx="5"
+                        ry="3"
+                        style="fill: #dd1313; stroke: #dd1313"
+                      />
+                    </svg>
+                  </span>
+                            <span class="float-left" *ngIf="votacion.PosicionVoto == 3">
+                    <svg height="6" width="18">
+                      <ellipse
+                        cx="5.5"
+                        cy="3"
+                        rx="5"
+                        ry="3"
+                        style="fill: #ffff00; stroke: #ffff00"
+                      />
+                    </svg>
+                  </span>
+                            <span class="float-left" *ngIf="votacion.PosicionVoto == 4">
+                    <svg height="6" width="18">
+                      <ellipse
+                        cx="5.5"
+                        cy="3"
+                        rx="5"
+                        ry="3"
+                        style="fill: #fff; stroke: #fff"
+                      />
+                    </svg>
+                  </span>
                             </span>
                             <br />
                             </span>
                         </div>
                         <div class="col-3 col-md-3 padding-0">
-                            <span *ngFor="let votacion of votaciones2" [class.voto-white]="
-                    votacion.Ubicacion == 0 || votacion.Ubicacion > 3
-                  " [class.voto-red]="
-                    votacion.Ubicacion == 1 || votacion.Ubicacion == 2
-                  " [class.voto-azul]="votacion.Ubicacion >= 3" class="clearfix">
-                  <b>{{ votacion.NombreCompleto | uppercase }}</b>
-                  <span *ngIf="votacion.VotacionActiva == true">
-                    <span
-                      class="float-left"
-                      *ngIf="votacion.Votacion == 999 || votacion.Votacion == 0"
-                    >
-                      <svg height="6" width="18">
-                        <ellipse
-                          cx="5.5"
-                          cy="3"
-                          rx="5"
-                          ry="3"
-                          style="fill: #fff; stroke: #fff"
-                        />
-                      </svg>
-                    </span>
+                            <span *ngFor="let votacion of votaciones2" [class.voto-white]="votacion.TipoVoto == 0" [class.voto-red]="
+                  votacion.TipoVoto == 1 || votacion.TipoVoto == 2
+                " [class.voto-azul]="votacion.Ubicacion >= 3" class="clearfix">
+                <b>{{ votacion.Diputado.NombreAMostrar | uppercase }}</b>
+                <span *ngIf="votacion.VotacionActiva == true">
+                  <span
+                    class="float-left"
+                    *ngIf="votacion.Votacion == 999 || votacion.Votacion == 0"
+                  >
+                    <svg height="6" width="18">
+                      <ellipse
+                        cx="5.5"
+                        cy="3"
+                        rx="5"
+                        ry="3"
+                        style="fill: #fff; stroke: #fff"
+                      />
+                    </svg>
+                  </span>
                             <span class="float-left" *ngIf="votacion.Votacion == 1">
-                      <svg height="6" width="18">
-                        <ellipse
-                          cx="5.5"
-                          cy="3"
-                          rx="5"
-                          ry="3"
-                          style="fill: #008000; stroke: #008000"
-                        />
-                      </svg>
-                    </span>
+                    <svg height="6" width="18">
+                      <ellipse
+                        cx="5.5"
+                        cy="3"
+                        rx="5"
+                        ry="3"
+                        style="fill: #008000; stroke: #008000"
+                      />
+                    </svg>
+                  </span>
                             <span class="float-left" *ngIf="votacion.Votacion == 2">
-                      <svg height="6" width="18">
-                        <ellipse
-                          cx="5.5"
-                          cy="3"
-                          rx="5"
-                          ry="3"
-                          style="fill: #dd1313; stroke: #dd1313"
-                        />
-                      </svg>
-                    </span>
+                    <svg height="6" width="18">
+                      <ellipse
+                        cx="5.5"
+                        cy="3"
+                        rx="5"
+                        ry="3"
+                        style="fill: #dd1313; stroke: #dd1313"
+                      />
+                    </svg>
+                  </span>
                             <span class="float-left" *ngIf="votacion.Votacion == 3">
-                      <svg height="6" width="18">
-                        <ellipse
-                          cx="5.5"
-                          cy="3"
-                          rx="5"
-                          ry="3"
-                          style="fill: #ffff00; stroke: #ffff00"
-                        />
-                      </svg>
-                    </span>
+                    <svg height="6" width="18">
+                      <ellipse
+                        cx="5.5"
+                        cy="3"
+                        rx="5"
+                        ry="3"
+                        style="fill: #ffff00; stroke: #ffff00"
+                      />
+                    </svg>
+                  </span>
                             <span class="float-left" *ngIf="votacion.Votacion == 4">
-                      <svg height="6" width="18">
-                        <ellipse
-                          cx="5.5"
-                          cy="3"
-                          rx="5"
-                          ry="3"
-                          style="fill: #fff; stroke: #fff"
-                        />
-                      </svg>
-                    </span>
+                    <svg height="6" width="18">
+                      <ellipse
+                        cx="5.5"
+                        cy="3"
+                        rx="5"
+                        ry="3"
+                        style="fill: #fff; stroke: #fff"
+                      />
+                    </svg>
+                  </span>
                             </span>
                             <br />
                             </span>
                         </div>
                         <div class="col-3 col-md-3 padding-0">
                             <span *ngFor="let votacion of votaciones3" [class.voto-white]="
-                    votacion.Ubicacion == 0 || votacion.Ubicacion > 3
-                  " [class.voto-red]="
-                    votacion.Ubicacion == 1 || votacion.Ubicacion == 2
-                  " [class.voto-azul]="votacion.Ubicacion >= 3" class="clearfix">
-                  <b>{{ votacion.NombreCompleto | uppercase }}</b>
-                  <span *ngIf="votacion.VotacionActiva == true">
-                    <span
-                      class="float-left"
-                      *ngIf="votacion.Votacion == 999 || votacion.Votacion == 0"
-                    >
-                      <svg height="6" width="18">
-                        <ellipse
-                          cx="5.5"
-                          cy="3"
-                          rx="5"
-                          ry="3"
-                          style="fill: #fff; stroke: #fff"
-                        />
-                      </svg>
-                    </span>
+                  votacion.Ubicacion == 0 || votacion.Ubicacion > 3
+                " [class.voto-red]="
+                  votacion.Ubicacion == 1 || votacion.Ubicacion == 2
+                " [class.voto-azul]="votacion.Ubicacion >= 3" class="clearfix">
+                <b>{{ votacion.Diputado.NombreAMostrar | uppercase }}</b>
+                <span *ngIf="votacion.VotacionActiva == true">
+                  <span
+                    class="float-left"
+                    *ngIf="votacion.Votacion == 999 || votacion.Votacion == 0"
+                  >
+                    <svg height="6" width="18">
+                      <ellipse
+                        cx="5.5"
+                        cy="3"
+                        rx="5"
+                        ry="3"
+                        style="fill: #fff; stroke: #fff"
+                      />
+                    </svg>
+                  </span>
                             <span class="float-left" *ngIf="votacion.Votacion == 1">
-                      <svg height="6" width="18">
-                        <ellipse
-                          cx="5.5"
-                          cy="3"
-                          rx="5"
-                          ry="3"
-                          style="fill: #008000; stroke: #008000"
-                        />
-                      </svg>
-                    </span>
+                    <svg height="6" width="18">
+                      <ellipse
+                        cx="5.5"
+                        cy="3"
+                        rx="5"
+                        ry="3"
+                        style="fill: #008000; stroke: #008000"
+                      />
+                    </svg>
+                  </span>
                             <span class="float-left" *ngIf="votacion.Votacion == 2">
-                      <svg height="6" width="18">
-                        <ellipse
-                          cx="5.5"
-                          cy="3"
-                          rx="5"
-                          ry="3"
-                          style="fill: #dd1313; stroke: #dd1313"
-                        />
-                      </svg>
-                    </span>
+                    <svg height="6" width="18">
+                      <ellipse
+                        cx="5.5"
+                        cy="3"
+                        rx="5"
+                        ry="3"
+                        style="fill: #dd1313; stroke: #dd1313"
+                      />
+                    </svg>
+                  </span>
                             <span class="float-left" *ngIf="votacion.Votacion == 3">
-                      <svg height="6" width="18">
-                        <ellipse
-                          cx="5.5"
-                          cy="3"
-                          rx="5"
-                          ry="3"
-                          style="fill: #ffff00; stroke: #ffff00"
-                        />
-                      </svg>
-                    </span>
+                    <svg height="6" width="18">
+                      <ellipse
+                        cx="5.5"
+                        cy="3"
+                        rx="5"
+                        ry="3"
+                        style="fill: #ffff00; stroke: #ffff00"
+                      />
+                    </svg>
+                  </span>
                             <span class="float-left" *ngIf="votacion.Votacion == 4">
-                      <svg height="6" width="18">
-                        <ellipse
-                          cx="5.5"
-                          cy="3"
-                          rx="5"
-                          ry="3"
-                          style="fill: #fff; stroke: #fff"
-                        />
-                      </svg>
-                    </span>
+                    <svg height="6" width="18">
+                      <ellipse
+                        cx="5.5"
+                        cy="3"
+                        rx="5"
+                        ry="3"
+                        style="fill: #fff; stroke: #fff"
+                      />
+                    </svg>
+                  </span>
                             </span>
                             <br />
                             </span>
                         </div>
                         <div class="col-2 col-md-2 padding-0">
-                            <br>
-                            <div class=" voto-green" *ngFor="let favor of votosAFavor">
+                            <br />
+                            <div class="voto-green" *ngFor="let favor of votosAFavor">
                                 <p>
                                     <b>A FAVOR {{ favor.count }}</b>
                                 </p>
                             </div>
-                            <br><br>
-                            <div class=" voto-red" *ngFor="let contra of votosEnContra">
+                            <br /><br />
+                            <div class="voto-red" *ngFor="let contra of votosEnContra">
                                 <p>
                                     <b>EN CONTRA {{ contra.count }}</b>
                                 </p>
-                            </div> <br><br>
-                            <div class=" voto-yellow" *ngFor="let abs of votosAbstencion">
+                            </div>
+                            <br /><br />
+                            <div class="voto-yellow" *ngFor="let abs of votosAbstencion">
                                 <p>
                                     <b>ABSTENCIÓN {{ abs.count }}</b>
                                 </p>
-                            </div> <br><br>
-                            <div class=" " *ngFor="let present of presentes">
+                            </div>
+                            <br /><br />
+                            <div class="" *ngFor="let present of presentes">
                                 <p>
                                     <b>PRESENTES {{ present.count }}</b>
                                 </p>
-                            </div> <br><br>
+                            </div>
+                            <br /><br />
                             <br />
                         </div>
                     </div>
                     <br />
                     <br />
-
                 </div>
-
             </div>
         </div>
         <br />

@@ -33,12 +33,12 @@ export class VotacionNorteComponent implements OnInit {
         setTimeout(() => this.fetchVotacionaActiva(), 15000);
         if (result.data.getVotacionActiva) {
           this.votacionActiva =
-            result.data && result.data.getVotacionActiva.Votos;
+            result.data && result.data.getVotacionActiva;
           this.votaciones1 = this.votacionActiva.Votos.slice(0, 83);
           this.votaciones2 = this.votacionActiva.Votos.slice(83, 166);
           this.votaciones3 = this.votacionActiva.Votos.slice(166, 253);
         }
-        console.log({ result });
+        console.log({votaciones: this.votaciones1 });
         this.loading = result.loading;
         this.error = result.errors;
       });

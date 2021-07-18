@@ -27,8 +27,8 @@
                             <br />
                             </span>
                         </div>
-                        <div *ngIf="allAsistencias" class="col-4 col-md-4 padding-0">
-                            <span *ngFor="let votacion2 of allAsistencias" [class.voto-white]="votacion2.TipoAsistencia == 0" [class.voto-red]="
+                        <div *ngIf="allAsistencias2" class="col-4 col-md-4 padding-0">
+                            <span *ngFor="let votacion2 of allAsistencias2" [class.voto-white]="votacion2.TipoAsistencia == 0" [class.voto-red]="
                     votacion2.TipoAsistencia >= 1 &&
                     votacion2.TipoAsistencia <= 4 
                   ">
@@ -52,8 +52,8 @@
                             </span>
                         </div>
 
-                        <div *ngIf="allAsistencias" class="col-4 col-md-4 padding-0">
-                            <span *ngFor="let votacion3 of allAsistencias" [class.voto-white]="votacion3.Asistencia == 0" [class.voto-red]="
+                        <div *ngIf="allAsistencias3" class="col-4 col-md-4 padding-0">
+                            <span *ngFor="let votacion3 of allAsistencias3" [class.voto-white]="votacion3.Asistencia == 0" [class.voto-red]="
                     votacion3.TipoAsistencia >= 1 &&
                     votacion3.TipoAsistencia <= 4 
                   ">
